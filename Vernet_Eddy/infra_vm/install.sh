@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 virt-install --connect=qemu:///system \
-  --name=vm_2 \
-  --vcpus=2 \
-  --memory=2048 \
+  --name=front_VM \
+  --vcpus=1 \
+  --memory=1024 \
   --location=http://ftp.debian.org/debian/dists/bookworm/main/installer-amd64/ \
-  --disk size=5 \
+  --disk size=1 \
   --noautoconsole \
   --initrd-inject=preseed.cfg \
   --initrd-inject=postinst.sh \
